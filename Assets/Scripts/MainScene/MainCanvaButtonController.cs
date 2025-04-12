@@ -79,5 +79,4 @@ public class MainCanvaButtonController : MonoBehaviour
     {
         ErrorBox.SetActive(!ErrorBox.activeInHierarchy);
     }
-
 }

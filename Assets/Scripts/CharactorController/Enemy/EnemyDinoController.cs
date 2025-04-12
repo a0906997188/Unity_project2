@@ -5,13 +5,17 @@ public class EnemyDinoController : enemy
     
     public Animator anim;
 
-    
+
 
     private void FixedUpdate()
     {
         AttackDamage();
         Move(TargetPosition);
-        if (transform.position.x < -8) Die();
+        if (transform.position.x < -8)
+        {
+            BattleController.instance.HP -= 1;
+            Die();
+        }
     }
 
     public override void init(CharactorLevel level)

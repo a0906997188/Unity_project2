@@ -30,7 +30,7 @@ public static class GamePlayerMemory
         CurrentMoney = PlayerPrefs.GetInt("CurrentMoney", 0);
         CurrentDifficulty = PlayerPrefs.GetInt("CurrentDifficulty", (int)Difficulty.Easy);
         BunnyLevel = PlayerPrefs.GetInt("BunnyLevel", 1);  // 確保這裡有正確讀取
-        OpssoumLevel = PlayerPrefs.GetInt("OppsoumLevel",1);
+        OpossumLevel = PlayerPrefs.GetInt("OpsoumLevel",1);
         PigLevel = PlayerPrefs.GetInt("PigLevel", 1);
         SetLevelCleared(0, Difficulty.Easy);
 
@@ -75,6 +75,7 @@ public static class GamePlayerMemory
     /// <param name="BunnysLevel"></param>
     public static void SaveBunnyLV(CharactorLevel BunnysLevel)
     {
+        BunnyLevel = (int)BunnysLevel;
         PlayerPrefs.SetInt("BunnyLevel", (int)BunnysLevel);
         PlayerPrefs.Save();
     }
@@ -82,20 +83,23 @@ public static class GamePlayerMemory
     /// <summary>
     /// 用來儲存opssoum的等級
     /// </summary>
-    public static int OpssoumLevel { get; private set; }
-    
-    public static void SaveOpssoumLV(CharactorLevel OpssoumLevel)
+    public static int OpossumLevel { get; private set; }  // 正確的英文拼寫
+
+    public static void SaveOpossumLV(CharactorLevel opossumLevel)
     {
-        PlayerPrefs.SetInt("OppsoumLevel",(int)OpssoumLevel);
+        OpossumLevel = (int)opossumLevel;
+        PlayerPrefs.SetInt("OpossumLevel", (int)opossumLevel);
         PlayerPrefs.Save();
     }
+
 
     /// <summary>
     /// 儲存pig的等級
     /// </summary>
     public static int PigLevel { get; private set; }
-    public static void SavePigLV(CharactorLevel PigLevel)
+    public static void SavePigLV(CharactorLevel PigsLevel)
     {
+        PigLevel = (int)PigsLevel;
         PlayerPrefs.SetInt("PigLevel", (int)PigLevel);
         PlayerPrefs.Save();
     }

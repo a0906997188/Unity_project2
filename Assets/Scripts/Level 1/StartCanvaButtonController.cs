@@ -24,6 +24,7 @@ public class StartCanvaButtonController : MonoBehaviour
     public void WinReturnButton()
     {   string a= SceneManager.GetActiveScene().name;
         string b = a.Substring(6, a.Length);
+        GamePlayerMemory.AddMoney(BattleController.instance.WinMoney);
         GamePlayerMemory.SetLevelCleared(Convert.ToInt32(b), (Difficulty)GamePlayerMemory.CurrentDifficulty);
         SceneManager.LoadScene("MainScene");
     }
