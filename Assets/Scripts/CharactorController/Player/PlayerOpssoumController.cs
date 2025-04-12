@@ -21,7 +21,7 @@ public class PlayerOpssoumController : player
     /// </summary>
     void Init_Charactor()
     {
-        lv = (CharactorLevel)GamePlayerMemory.OpssoumLevel;
+        lv = (CharactorLevel)GamePlayerMemory.OpossumLevel;
         ToolScript.ChangeValueRelyOnLevel(out Attack, lv, 12, 14, 18, 24, 32);
         ToolScript.ChangeValueRelyOnLevel(out maxHealth, lv, 60, 70, 80, 100, 120);
         ToolScript.ChangeValueRelyOnLevel(out creatMoney, lv, 15, 15, 15, 18, 18);

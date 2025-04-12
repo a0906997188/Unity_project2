@@ -21,7 +21,7 @@ public class PlayerPigController : player
     /// </summary>
     void Init_Charactor()
     {
-        lv = (CharactorLevel)GamePlayerMemory.OpssoumLevel;
+        lv = (CharactorLevel)GamePlayerMemory.OpossumLevel;
         ToolScript.ChangeValueRelyOnLevel(out Attack, lv, 10, 10, 12, 14, 18);
         ToolScript.ChangeValueRelyOnLevel(out maxHealth, lv, 100, 120, 150, 180, 200);
         ToolScript.ChangeValueRelyOnLevel(out creatMoney, lv, 15, 15, 18, 18, 20);

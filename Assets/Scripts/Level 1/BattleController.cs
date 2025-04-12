@@ -25,6 +25,7 @@ public class BattleController : MonoBehaviour
     public int enemyCurrentNumber;     // 場上活著的敵人數量
     private int spawnedEnemyCount;     // 已生成的敵人數量
     private int totalEnemyCount;       // 該波敵人的總數
+    public int WinMoney = 1000;
 
     private void Awake()
     {
@@ -38,7 +39,7 @@ public class BattleController : MonoBehaviour
     public int HP= 3;
     private void FixedUpdate()
     {
-        if (instance.HP == 0)
+        if (instance.HP <= 0)
         {
             Lose();
         }
