@@ -80,6 +80,7 @@ public class EnemyBatController : enemy
 
     public override void Die()
     {
+        BattleController.instance.enemyCurrentNumber--;
         Destroy(this.gameObject);
     }
 

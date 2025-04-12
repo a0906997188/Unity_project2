@@ -80,7 +80,7 @@ public class BattleController : MonoBehaviour
         Debug.Log("敵人全部生成完畢，等待全數擊殺...");
 
         yield return new WaitUntil(() =>
-            spawnedEnemyCount == totalEnemyCount && enemyCurrentNumber == 0
+            enemyCurrentNumber == 0
         );
 
         Debug.Log(" 所有敵人已擊敗，玩家獲勝！");

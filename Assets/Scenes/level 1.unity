@@ -272,7 +272,6 @@ MonoBehaviour:
   ListEnemy:
   - enemyObject:
     - {fileID: 187042553356749686, guid: 1d3153b5bb6808d429ce2be88e409dcf, type: 3}
-    - {fileID: 4374345490871250390, guid: 1c0e6ca6cc6cd344899ccb8a75529629, type: 3}
     lv: 2
     people: 10
     PerTime: 3
